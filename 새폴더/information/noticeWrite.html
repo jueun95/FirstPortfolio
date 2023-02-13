@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="noticeWrite.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <h3>공지사항 작성</h3>
+        <section>
+            <form action="" id="posting">                          
+                <div id="name">제목</div> <input type="text" id="style">     
+                <div id="name">작성일</div>
+                    <input type="text" id="datepicker">     
+                <div id="name">내용</div>
+                <textarea name="" id="naeyong" cols="100" rows="30"></textarea>
+                <input type="submit" value="제출" id="jechul">
+                <br>
+                <a href="#" id="gle">수정</a>
+                <a href="#" id="gle">삭제</a>      
+            </form>            
+        </section>             
+    </div>
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true
+          });
+        } );
+    </script>
+</body>
+</html>

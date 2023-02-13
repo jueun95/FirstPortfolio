@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body{
+    position: relative;
+    font-size: 17px;
+}
+
+.info{
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.register{
+    text-align: center;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 30px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: grey;
+}
+
+#textId{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+#textPw1{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+#textPw2{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+#textN{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+
+#textTel{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+
+#textMail{
+    margin-bottom: 8px;
+    width: 390px;
+    height: 30px;
+}
+
+
+.tName{
+    width: 112px;
+    height: 25px;
+}
+
+#addr{
+    width: 390px;
+    height: 35px;
+}
+
+#regist{
+    margin-top: 30px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    background-color: #5d5a47;
+}
+
+#regist:active{
+    background-color: #F9B10B;
+}

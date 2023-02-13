@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="wrap">
+    <section id="downTotal">
+        <h1 class="login">로그인</h1>
+        <div class="user">아이디</div>
+            <input type="text" id="userId">
+        <div class="user">패스워드</div>
+            <input type="password" id="userPw">
+        <p>
+        <input type="submit" value="로그인" id="submit" onclick="checkAll()">
+        </p>
+    </section>
+    </div>
+    <script>
+            let idPattern = /^[A-Za-z]{1}[A-Za-z0-9]{6,12}$/;
+            let pwPattern = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
+
+            let user = document.querySelector("#userId");
+            let pw1 = document.querySelector("#userPw");
+
+            function checkValue(value,dataName){
+            if(value == ""){
+                alert(dataName + "입력해주세요!");
+                return false;
+            }
+            return true;
+            }
+
+            function checkId(id){
+            //입력된 값이 공백인 경우 함수를 중지하도록 설정
+            //checkValue -> false : 공백 -> !checkValue -> true
+            if(!checkValue(id.value,"아이디")){
+                return false;
+            }
+            if(!idPattern.test(id.value)){
+                alert("영문대소문자와 숫자 6~12자리로 입력");
+                id.value = "";
+                id.focus();
+                return false;
+            }
+            return true;
+            }
+            
+            function checkPwd(pwd){
+            if(!checkValue(pwd.value,"비밀번호")){
+                return false;
+            }
+            if(!pwPattern.test(pwd.value)){
+                alert("비밀번호는 영어대문자, 소문자, 숫자, 특수문자 모두를 포함하여 8~16자리로 입력하세요");
+                pwd.value = "";
+                pwd.focus();
+                return false;
+            }
+            return true;
+            }
+
+            function checkAll(){
+                if(!checkId(userId)) return false;
+                if(!checkPwd(pw1))return false;
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cloth.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+        <div class="logo"><a href="../main.html"><img src="../이미지1/logo.png" alt="로고"></a></div>
+        <div class="gnb">
+            <ul>
+                <li><a href="../menubar/hair.html">헤어</a></li>
+                <li><a href="../menubar/cloth.html">옷</a></li>
+                <li><a href="../menubar/color.html">컬러</a></li>
+                <li><a href="../menubar/personal.html">퍼스널컬러</a></li>
+                <li><a href="../menubar/shoplist.html">쇼핑몰추천</a></li>
+                <li><a href="../menubar/review.html">후기글</a></li>                                
+            </ul>
+        </div>
+        <div class="member">
+            <ul>
+                <li><a href="../information/register.html">회원가입</a></li>
+                <li><a href="../information/login.html">로그인</a></li>       
+                <li><a href="../information/credit.html">결제</a></li>               
+                <li><a href="../information/notice.html">공지사항</a></li>            
+            </ul>
+        </div>
+    </header>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div data-hash="slide1" class="swiper-slide"><img src="../이미지1/cloth1.PNG" alt=""></div>
+        <div data-hash="slide2" class="swiper-slide"><img src="../이미지1/cloth2.PNG" alt=""></div>
+        <div data-hash="slide3" class="swiper-slide"><img src="../이미지1/cloth3.PNG" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="page-main">
+      <aside>
+          <ul>
+              <li><a href="../menubar/cloth.html">2023</a></li>
+              <li><a href="#">2024</a></li>                
+          </ul>            
+          
+          <button><img src="../이미지1/btn_open.png" alt=""></button>
+      </aside>
+    </div>  
+    <footer>        
+      <p id="copyright">Copyright &copy;. Jueun. all rights reserved</p>
+    </footer>
+
+  </div><!-- wrap -->
+    
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          hashNavigation: {
+            watchState: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        })
+
+        let aside1 = $('.page-main > aside');
+        let asideButton = aside1.find('button');
+
+        asideButton.on('click',function(){
+            //aside1의 클래스에 'open'클래스가 지정되어 있으면 없애고(toggle =한/영전환과 동일의미)
+            //없으면 클래스를 지정
+            aside1.toggleClass('open');
+
+            //aside1에 open이 지정되어 있으면, true,
+            //open클래스가 없으면 false
+            if(aside1.hasClass('open')){
+                aside1.stop(true).animate({
+                    left: '-52px'
+                }, 300)
+
+                asideButton.find('img').attr('src','../이미지1/btn_close.png');
+
+            } else {
+                aside1.stop(true).animate({
+                    left : '-300px'
+                },300)
+
+                asideButton.find('img').attr('src','../이미지1/btn_open.png');
+            }
+        }) ; 
+      </script>
+</body>
+</html>

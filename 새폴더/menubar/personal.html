@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./personal.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+        <div class="logo"><a href="../main.html"><img src="../이미지1/logo.png" alt="로고"></a></div>
+        <div class="gnb">
+            <ul>
+                <li><a href="../menubar/hair.html">헤어</a></li>
+                <li><a href="../menubar/cloth.html">옷</a></li>
+                <li><a href="../menubar/color.html">컬러</a></li>
+                <li><a href="../menubar/personal.html">퍼스널컬러</a></li>
+                <li><a href="../menubar/shoplist.html">쇼핑몰추천</a></li>
+                <li><a href="../menubar/review.html">후기글</a></li>                                
+            </ul>
+        </div>
+        <div class="member">
+            <ul>
+                <li><a href="../information/register.html">회원가입</a></li>
+                <li><a href="../information/login.html">로그인</a></li>    
+                <li><a href="../information/credit.html">결제</a></li>                  
+                <li><a href="../information/notice.html">공지사항</a></li>            
+            </ul>
+        </div>
+    </header>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../이미지1/봄웜톤.PNG" alt="">
+          <input type="file" id="file">
+          <h1>봄 웜톤</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="../이미지1/여름쿨톤.PNG" alt="">
+          <input type="file" id="file">
+          <h1>여름 쿨톤</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="../이미지1/가을웜톤.PNG" alt="">
+          <input type="file" id="file">
+          <h1>가을 웜톤</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="../이미지1/겨울쿨톤.PNG" alt="">
+          <input type="file" id="file">
+          <h1>겨울 쿨톤</h1>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <footer>        
+      <p id="copyright">Copyright &copy;. Jueun. all rights reserved</p>
+    </footer>
+
+  </div><!-- wrap -->
+    
+  
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          keyboard: {
+            enabled: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+</body>
+</html>

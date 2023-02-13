@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.wrap{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.wrap > h3{
+    text-align: center;
+    font-size: 35px;
+}
+
+#posting{
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#style{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-width: 1px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+#name{
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#writeDate{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+#naeyong{    
+    border: 1px solid grey;    
+}
+
+#jechul{
+    margin-top: 10px;
+    width: 725px;
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: #F9B10B;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#jechul:hover{    
+    background-color: grey;
+    border: 1px solid white;    
+}
+
+#gle{    
+    display: inline-block;
+    font-size: 16px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;    
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #F9B10B;
+}
+
+#gle:hover{
+    text-decoration: underline;  
+    background-color: grey;  
+}
+
